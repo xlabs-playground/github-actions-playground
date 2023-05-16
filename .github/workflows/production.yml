@@ -71,7 +71,7 @@ jobs:
         run: echo ${NODE_OPTIONS} ${REACT_APP_CLUSTER} ${REACT_APP_SOLANA_API_URL} ${REACT_APP_COVALENT_API_KEY} ${REACT_APP_TRM_API_KEY}
         
       - name: Publish
-        run: cd build && npm run set-version && npm publish
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
